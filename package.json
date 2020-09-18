@@ -1,0 +1,11 @@
+{
+  "name": "channel-sync-bot",
+  "version": "1.0.0",
+  "description": "Sync channels between multiple servers!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Cooper <kevin@kevincooper.io>",
+  "license": "MIT"
+}
