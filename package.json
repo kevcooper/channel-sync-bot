@@ -4,6 +4,9 @@
   "description": "Sync channels between multiple servers!",
   "main": "index.js",
   "scripts": {
+    "build": "npm install",
+    "build-prod": "npm install --only=prod",
+    "dist": "npm run build-prod && mkdir -p dist && cp -r node_modules dist/ && cp index.js config.js dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kevin Cooper <kevin@kevincooper.io>",
