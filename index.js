@@ -22,11 +22,11 @@ bot.on('message', msg => {
     msg.channel.id in channels) {
     const forwardList = channels[msg.channel.id]
 
-    const log = { user_name: msg.author.username, user_id: msg.author.id, channel_name: msg.channel.name, channel_id: msg.channel.id, server_name: msg.guild.name, server_id: msg.guild.id, forward_list: forwardList }
+    const log = { user_name: msg.author.username, user_tag: msg.author.tag, user_id: msg.author.id, channel_name: msg.channel.name, channel_id: msg.channel.id, server_name: msg.guild.name, server_id: msg.guild.id, forward_list: forwardList }
     console.log(JSON.stringify(log))
     forwardList.forEach(channelId => {
       const channel = bot.channels.cache.get(channelId)
-      channel.send(`<${msg.author.username}@${msg.guild}>\n${msg.content.toString()}`, { disableMentions: 'all' })
+      channel.send(`**<${msg.author.username}@${msg.guild}>**\n${msg.content.toString()}`, { disableMentions: 'all' })
     })
   }
 })
